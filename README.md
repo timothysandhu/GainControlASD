@@ -12,3 +12,7 @@ Code : 4 recursive functions to analyse the data (each of the functions uses the
      2) result = Illus_Anal('task',result,plot) takes in the output from Thresh_Anal and adds further fields to the result structre. Allows for plotting of the psychometric curves. Note that task should be a string 'A2' or 'C2'.
      3) result = CleanUp(result) performs further exclusions based on model fitting. Uses the output from Illus_Anal 
      4) [output,result] = Demo_Prep(result,demographics,task) takes in the output from CleanUp and adds some demographic information. Additionally, this function prepares the csv's required for analysis in JASP and for the online Estimation plots GUI. 
+
+Summary : This file contains the csv's for further analysis, .mat summary files with all the relevant information for each task.
+
+Note that due to the stochastic nature of the bootstrapping, the analysis may produce different results to the published version.

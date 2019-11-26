@@ -1,4 +1,4 @@
-function result=Thresh_Anal(task)
+function result=Thresh_Anal
 % Analyse the data from experiment 1 to determine the discrimination
 % thresholds for each participant
 % Inputs : task - a string e.g. A1 or C1
@@ -9,6 +9,7 @@ function result=Thresh_Anal(task)
 
 %% Directory
 files = dir; % get the files
+files([files.isdir]) = [];
 
 %% Loop through the files
 for i = 1:length(files)
@@ -41,9 +42,9 @@ for i = 1:length(files)
         % threshold in the last 10 or so trials
         result(i).EndProb = 1; % it is unlikely that the participants have converged at this stage
     end
-end
-if (result(i).Correct<.707 & result(i).Conv>1) | result(i).EndProb==1
+if result(i).Correct<.707 & result(i).Conv>1 | result(i).EndProb==1
     result(i).discExclude = 1;
+end
 end
 
 %% Convergence criteria

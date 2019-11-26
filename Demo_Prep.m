@@ -2,16 +2,14 @@ function [output,result] = Demo_Prep(result,Demo,task)
 
 for i = 1 : length(result)
     for j = 1 : length(result)
-        if contains(result(i).Name(6:10),Demo(j).name)
+        if contains(result(i).Name,Demo(j).name)
             result(i).group = Demo(j).group;
-            result(i).ID = Demo(j).name;
             result(i).ADOS = Demo(j).ADOS;
             result(i).Age = Demo(j).age;
             result(i).IQ = Demo(j).IQ;
             result(i).AQ = Demo(j).AQ;
         end
     end
-    ID(i) = result(i).ID;
     ADOS(i) = result(i).ADOS;
     Age(i) = result(i).Age;
     IQ(i) = result(i).IQ;

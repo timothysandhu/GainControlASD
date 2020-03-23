@@ -1,10 +1,11 @@
-function [result]=Illus_Anal(task,result,PalaPlot)
+function [result]=Illus_Anal(result,PalaPlot)
 %% Inputs - task identifier string, 'C2' or 'A2'
 %         - result structure from the respective discrimiation portion
 %  Check groups.mat in DATA/DataFiles for grouping info
 
 %% Find the files
 files = dir; % get the files
+files([files.isdir]) = []; % remove anything irrelevant
 
 %% Set up the Palamedes parameters
 searchGrid.alpha = -1:0.01:1;  % initial search grid values for bias (alpha) and slope (beta). Gamma (guess rate), Lambda (lapse rate) fixed.

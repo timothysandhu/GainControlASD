@@ -1,5 +1,5 @@
 # GainControlASD
-Contains the MATLAB code for the analysis of the data presented in Sandhu et al, 2019 https://wellcomeopenresearch.org/articles/4-208/v1#ref-42
+Contains the MATLAB code for the analysis of the data presented in Sandhu et al, 2019 https://wellcomeopenresearch.org/articles/4-208/v1
 
 This repo contains several scripts, which are essentially 4 recursive functions to analyse the data (each of the functions uses the output of the previous, appending more information).
 Set your working directory to each of the raw data sub folders.
